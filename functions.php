@@ -42,8 +42,8 @@ remove_action('wp_head', 'wlwmanifest_link'); // 移除离线编辑器开放接�
 remove_filter('the_content', 'wptexturize'); // 禁止代码标点符合转义
 
 // 禁用REST API、移除wp-json链接
-add_filter('rest_enabled', '_return_false');
-add_filter('rest_jsonp_enabled', '_return_false');
+add_filter('rest_enabled', '__return_false');
+add_filter('rest_jsonp_enabled', '__return_false');
 remove_action( 'wp_head', 'rest_output_link_wp_head', 10 );
 remove_action( 'wp_head', 'wp_oembed_add_discovery_links', 10 );
 
